@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                Malinois_01.jpg  label:                   malinois
+ 2 key:                    Lama_01.jpg  label:                       lama
+ 3 key:              Coffee_mug_01.jpg  label:                 coffee mug
+ 4 key:                Malinois_02.jpg  label:                   malinois
+
+     MATCH:
+
+               Malinois_01.jpg: 
+Real:                   malinois   Classifier:                       malinois
+
+                   Lama_01.jpg: 
+Real:                       lama   Classifier:                          llama
+
+ NOT A MATCH:
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:    boston bull, boston terrier
+
+               Malinois_02.jpg: 
+Real:                   malinois   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+               Malinois_01.jpg: 
+Real:                   malinois   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Lama_01.jpg: 
+Real:                       lama   Classifier:                          llama  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:    boston bull, boston terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               Malinois_02.jpg: 
+Real:                   malinois   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+N NotDog Images     :   2
+ 
+Pct Match           :  50.0
+Pct Correct Dogs    : 100.0
+Pct Correct Breed   :  50.0
+Pct Correct Notdogs :  50.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Coffee_mug_01.jpg
+
+INCORRECT Dog Breed Assignment:
+Real:                   malinois   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+** Total Elapsed Runtime: 0:0:0
